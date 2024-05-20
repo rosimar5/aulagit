@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Dados</title>
+</head>
+<body>
+
+<h1>Dados Armazenados</h1>
+
+<table border="1" id="dadosTable">
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Sexo</th>
+            <th>Data de Matrícula</th>
+        </tr>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+// Função para buscar os dados do servidor
+async function fetchData() {
+    const response = await fetch('https://inforpiaui.com.br/aula/ler_dados.php');
+    const data = await response.json();
+    return data;
+}
+
+// Função para popular a tabela com os dados
+async function populateTable() {
+    const data = await fetchData();
+    const tableBody = document.getElementById('dadosTable').getElementsByTagName('tbody')[0];
+    
+    data.forEach(item => {
+        const row = tableBody.insertRow();
+        row.insertCell(0).textContent = item.nome;
+        row.insertCell(1).textContent = item.cpf;
+        row.insertCell(2).textContent = item.sexo;
+        row.insertCell(3).textContent = item.data_matricula;
+    });
+}
+
+// Chamar a função para popular a tabela
+populateTable();
+</script>
+
+</body>
+</html>

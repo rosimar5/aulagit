@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina de Conversor</title>
+</head>
+
+<body style="background-color: rgb(112, 154, 189);">
+
+    <font face="georgia" size="3">
+        <h1 align="center" style="background-color: rgb(240, 214, 214); color: rgb(28, 28, 92);">
+            <b>
+                <u>
+                    CONVERSOR
+                </u>
+            </b>
+        </h1>
+    </font>
+
+    <p align="center">
+        <img src="https://embarcados.com.br/wp-content/uploads/2023/01/binario-850x510.png" width="400" height="300">
+    </p>
+
+    <hr>
+    <p align="center">
+        <label>Número Decimal</label>
+        <input name="decimal" id="decimal_id" />
+        <br>
+        <br>
+        <button onclick="converte_binario()">Converter</button>
+        <br>
+        <br>
+        <label>Binário</label>
+        <input name="binario" id="binario_id" />
+    </p>
+
+    <script>
+        function converte_binario() {
+            let decimal = document.getElementById("decimal_id").value;
+            let binario = decimal_binario(Number(decimal));
+            document.getElementById("binario_id").value = binario;
+        }
+
+        function decimal_binario(numero) {
+            if (numero < 2) {
+                return numero.toString();
+            }
+            binario = "";
+            while (numero > 1) {
+                resto = numero % 2;
+                binario = resto.toString() + binario;
+                numero = Math.floor(numero / 2);
+            }
+            return numero.toString() + binario;
+        }
+    </script>
+</body>
+
+</html>

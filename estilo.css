@@ -1,0 +1,23 @@
+body{
+    background-color: #FF9500;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.menu{
+    color:aquamarine;
+    background-color: green;
+    width: 100px;
+    float: left;
+    text-align: center;  
+}
+#inicio{
+
+    color: #FFF;
+}
+#pagina1{
+    color: blue;
+}
+#pagina2{
+    color: bisque;
+}

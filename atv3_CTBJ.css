@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(54, 208, 255);
+}
+#titulo{
+    color: white;
+    text-align: center; 
+}
+.menu{
+    margin: auto;
+    background-color: rgb(175, 255, 175);
+    width: 600px;
+}
+.menu-principal{
+    font-size: 25px;
+    padding: 10px;
+}
+.menu-opcoes{
+    width: 100px;
+    height: 300px;
+   float: right;
+    font-size: 10px;
+    margin-top: 50px;
+}
