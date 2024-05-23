@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(44, 178, 202);
+    font-family: Arial, 'Times New Roman';
+    margin: 0px 600px 0px 700px;
+}
+
+#titulo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.principal {
+    color: white;
+    width: 400px;
+    float: left;
+}
+
+#label {
+    font-size: 15px;
+    background-color: rgb(2, 84, 151);
+}
+
+.btn-converter {
+    background-color: rgb(2, 84, 151);
+    color: white;
+}
+
+.btn-converter:hover {
+    background-color: rgb(12, 38, 87);
+}
+
+.binario {
+    color: white;
+    width: 400px;
+    margin-left: 40px;
+    float: left;
+}
+
+@media (max-width: 900px) {
+    .principal {
+        width: 400px;
+        background-color: blueviolet;
+    }
+}

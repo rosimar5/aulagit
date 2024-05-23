@@ -4,36 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina de Conversor</title>
+    <link rel="stylesheet" type="text/css" href="decimalbinarioatv.css" />
 </head>
 
-<body style="background-color: rgb(112, 154, 189);">
+<body>
+    <h1 id="titulo">
+        <b>
+            CONVERSOR
+        </b>
+    </h1>
 
-    <font face="georgia" size="3">
-        <h1 align="center" style="background-color: rgb(240, 214, 214); color: rgb(28, 28, 92);">
-            <b>
-                <u>
-                    CONVERSOR
-                </u>
-            </b>
-        </h1>
-    </font>
-
-    <p align="center">
-        <img src="https://embarcados.com.br/wp-content/uploads/2023/01/binario-850x510.png" width="400" height="300">
-    </p>
-
-    <hr>
-    <p align="center">
-        <label>Número Decimal</label>
+    <div class="principal">
+        <label id="label">Número Decimal</label>
         <input name="decimal" id="decimal_id" />
-        <br>
-        <br>
-        <button onclick="converte_binario()">Converter</button>
-        <br>
-        <br>
-        <label>Binário</label>
+        <button onclick="converte_binario()" class="btn-converter">Converter</button>
+
+    </div>
+
+    <div class="binario">
+        <label id="label">Binário</label>
         <input name="binario" id="binario_id" />
-    </p>
+    </div>
 
     <script>
         function converte_binario() {
